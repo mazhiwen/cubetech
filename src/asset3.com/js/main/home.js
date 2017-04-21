@@ -75,7 +75,7 @@ define(function(require) {
 		$(".banner_img_box:eq("+lastIndex+")").removeClass("banner_"+(lastIndex+1)+"_animate");
 	}
 
-	var bannerInterval=setInterval(bannerSwitch,5000);
+	//var bannerInterval=setInterval(bannerSwitch,5000);
 
 
 	//第四部分字体滚动
