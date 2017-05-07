@@ -4272,7 +4272,7 @@ p.frontbehindweightv .strong
   }
   p{
     line-height:1em;
-    margin:20px 0;
+    //margin:20px 0;
   } 
 }
 .sectionborderwrap{
@@ -4990,10 +4990,36 @@ p.frontbehindweightv .strong
       }
     }
     .section3{
-      background: white;
+      &{
+        background: white;
+      }
+
     }
   }
+  .shareholder{
+    &{
+      width: 80%;
+      margin: auto;
+    }
+    .frontbehindweightv{
+      color: black;
+    }
+    .shareholderblock{
+      &{
+        padding-top: 20px;
+        background: url('../../images/aboutus/07.jpg') top right / 90% auto no-repeat;
+      }
+      &>img{
+        width: 10%;
+        margin-right: 10%;
+      }
+    }
+    .shareholdertxt{
+      width: 80%;
+      display: inline-block;
+    }
 
+  }
 
 
 }
