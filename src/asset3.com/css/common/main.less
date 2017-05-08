@@ -1,4 +1,6 @@
 /******************************************************************初始化***************************************/
+@mainfontcolor:rgb(125,125,125);
+@colorgraylight:rgb(188, 188, 188);
 *{
 	padding: 0;
 	margin: 0;
@@ -19,7 +21,7 @@ html{
 body{
 	
     line-height: 1.42857143;
-    color: #333;
+    color: @mainfontcolor;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
@@ -53,10 +55,10 @@ h4
 
 }*/
 b, strong,.strong {
-    font-weight: 700;
+  font-weight: 700;
 }
 p {
-    margin: 10px 0 ;
+  margin-bottom: 10px;
 }
 .gray_small{
 	font-size: 14px;
@@ -90,9 +92,8 @@ p {
 a标签*/
 a{
 	text-decoration: none;
-	color: black;
+	color: inherit;
 	cursor: pointer;
-
 	display: inline-block;
 }
 a:hover{
@@ -3866,9 +3867,6 @@ html{
     color: rgb(114, 114, 114);
     padding: 59px 66px;
 }
-.main_title{
-	font-size: 1.43rem;
-}
 .spacing_word{
 	letter-spacing: 4em;
 	font-size: 22px;
@@ -4250,7 +4248,7 @@ p.frontbehindweight , p.frontbehindweightv{
   font-size:2.5rem;
   font-weight:200;
   color: @lightblue;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 p.frontbehindweightv .strong  
 {
@@ -4271,8 +4269,8 @@ p.frontbehindweightv .strong
     margin-top:10px;
   }
   p{
-    line-height:1em;
-    //margin:20px 0;
+    line-height:1.7em;
+    margin:20px 0;
   } 
 }
 .sectionborderwrap{
@@ -4283,7 +4281,7 @@ p.frontbehindweightv .strong
     color: white;
   }
   &>div:nth-child(1){
-    color: rgb(188, 188, 188);
+    color: @colorgraylight;
   }
   .section5borderbox{
     @borderanimationborderwidth:5px;
@@ -4366,6 +4364,14 @@ p.frontbehindweightv .strong
   }
   &>div:nth-child(2){
     height: 40%;
+  }
+}
+.sectionhalfheight46{
+  &>div:nth-child(1){
+    height: 40%;
+  }
+  &>div:nth-child(2){
+    height: 60%;
   }
 }
 .sectionhalfheight55{
@@ -4605,11 +4611,18 @@ p.frontbehindweightv .strong
     padding: 10px 15%;
   }
   a{
-    padding: 0 10px;
-    line-height: 30px;
+    &{
+      padding: 0 20px;
+      line-height: 30px;
+      font-size: @fontsizes;
+    }
+    &:hover{
+      color: black;
+      font-weight: 600;
+    }
   }
   &>a:nth-child(n+2){
-    border-left: 1px solid black;
+    border-left: 1px solid @colorgraylight;
   }
 }
 .maincontentwrap{
@@ -4760,7 +4773,6 @@ p.frontbehindweightv .strong
     }
   }
 }
-
 /*pageservice*/
 .pageservice{
   .section1{
@@ -4968,60 +4980,324 @@ p.frontbehindweightv .strong
     }
   }
 }
+.aboutmaintitleblock{
+  padding: 30px 15%;
+}
 .pageaboutus{
+  .aboutusmain{
+    &{
+      text-align: center;
+      padding-bottom: 50px;
+    }
+    &>div{
+      transition:all 0.2s;
+    }
+  }
+  .blockshow{
+    display: block !important;
+    opacity: 1 !important;
+  }
+  .blockhide{
+    display: none !important;
+    opacity: 0 !important;
+  }
+  .frontbehindweightv{
+    &{
+      color: @mainfontcolor;
+    }
+    .strong{
+      color: black;
+    }
+  } 
+  .aboutcontentwidth{
+    width: 80%;
+    margin: auto;
+  }
   .aboutcubetech{
     .section1{
       &{
-        padding: 30px 15%;
-      }
-      .frontbehindweightv{
-        color: black;
-        margin-bottom: 0;
+        
       }
     }
     .section2{
       &{
+        background-image: url('../../images/aboutus/aboutcubes2bg.jpg');
         color: white;
       }
       .section2c{
+        &{
+          margin: 50px 0;
+        }
         &>div{
           display: inline-block;
+          margin: 0 8%;
+          cursor: pointer;
+        }
+        .section2ccircle{
+          @section2ccirclegray:rgb(125, 125, 125);
+          &{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background: @section2ccirclegray;
+            position: relative;
+            margin-bottom: 40px;
+          }
+          p{
+            line-height: 100px;
+          }
+          &:before { 
+            content:""; 
+            position: absolute; 
+            left: 44px; 
+            bottom: -20px; 
+            width: 0; 
+            height: 0; 
+            border-left: 6px solid transparent; 
+            border-top: 20px solid @section2ccirclegray; 
+            border-right: 6px solid transparent; 
+          }
+        }
+        .section2cboxhover{
+          .section2ccircle{
+            &{
+              background: @lightblue;
+            }
+            &:before { 
+              border-top-color:@lightblue; 
+            }
+          }
+        }
+      }
+      .frontbehindweightv{
+        .strong{
+          color: white;
         }
       }
     }
     .section3{
       &{
-        background: white;
+        background: #f7f7f7;
       }
-
+      &>div:nth-child(1){
+        height: 30%;
+      }
+      &>div:nth-child(2){
+        &{
+          padding:0 5% 20px;
+          height: 70%;
+        }
+        &>div{
+          display: inline-block;
+          vertical-align: top;
+          height: 100%;
+        }
+        .ceosaybox{
+          &{
+            padding: 20px;
+            text-align: left;
+            width: 65%;
+            overflow-y: scroll;
+            background: white;
+          }
+          .mainstrong{
+            color: black;
+          }
+        }
+        .ceoimgbox{
+          &{
+            background: url('../../images/aboutus/ceo.png') center right / auto 100% no-repeat;
+            width: 35%;
+            text-align: right;  
+          }
+          img{
+            height: 100%;
+          }
+        }
+      }
     }
   }
   .shareholder{
     &{
-      width: 80%;
-      margin: auto;
-    }
-    .frontbehindweightv{
-      color: black;
+      
     }
     .shareholderblock{
       &{
+        .aboutcontentwidth;
         padding-top: 20px;
-        background: url('../../images/aboutus/07.jpg') top right / 90% auto no-repeat;
+        background: url('../../images/aboutus/shareholderblocktop.png') top right / 90% auto no-repeat;
+        margin-bottom: 50px;
       }
       &>img{
         width: 10%;
-        margin-right: 10%;
+        margin-right: 5%;
       }
     }
     .shareholdertxt{
-      width: 80%;
-      display: inline-block;
+      &{
+        width: 85%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+      }
+      &>p:first-child{
+        .mainstrong;
+      }
     }
-
   }
+  .ourelite{
+    &>div:nth-child(2){
+      &{
+        text-align: left;
+      }
+      &>div:not(:nth-child(4n)){
+        margin-left: 3%;
+      }
+    }
+    .eliteblock{
+      &{display: inline-block;
+        width: 22.7%;
+        text-align: center;
+      }
+      img{
+        width: 75%;
+      }
+    }
+    .elitedesc{
 
-
+    }
+    .elitedetails{
+      font-size: @fontsizexs;
+    }
+  }
+  .ourevent{
+    .sub_3{
+      &{
+        overflow: hidden;
+        font-size: @fontsizexs;
+      }
+      &>div{
+        padding-bottom: 20px;
+      }
+      &>div>h2{
+        color: @lightblue;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+    .sub_3_text_left{
+      &{
+        clear: both;
+        text-align: right;
+        margin-left: 7px;
+        width: 50%;
+        background: url(../../images/aboutus/about_3_dot.jpg) repeat-y right;
+      }
+      &>*{
+        padding-right: 50px;
+      }
+      &>h2{  
+        background: url(../../images/aboutus/about_3_big_dot.jpg) no-repeat right top;
+      }
+      &>p{ 
+        padding-left: 100px;
+      }
+    }
+    .sub_3_text_right{
+      &{
+        text-align: left;
+        width: 50%;
+        float: right;
+        margin-right: 7px;
+        background: url(../../images/aboutus/about_3_dot.jpg) repeat-y left;
+      }
+      &>*{
+        padding-left: 50px;
+      }
+      &>h2{ 
+        background: url(../../images/aboutus/about_3_big_dot.jpg) no-repeat left top;
+      }
+      &>p{  
+        padding-right: 100px;
+      }
+    }
+  }
+  .joinus{
+    &{
+      width: 90%;
+      margin: auto;
+    }
+    .jobswrap{
+      &{
+        font-size: @fontsizes;
+      }
+      .jobtitlewrap{
+        &{
+          border-bottom: 1px solid rgba(188, 188, 188,0.5);
+          text-align: left;
+        }
+        &>li{
+          &{
+            display: inline-block;
+            border-bottom: 30px solid rgb(242, 242, 242);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            height: 0;
+            padding: 0 30px;
+            line-height: 30px;
+            margin-right:5px;
+            color: black;
+            .strong;
+            cursor: pointer;
+          }
+          &:hover{
+            border-bottom-color:@lightblue;
+            color: white;
+          }
+        }
+      }
+      .jobdetailswrap{
+        &{
+          text-align: left;
+        }  
+        .jobdetailsbox{
+          &{
+            list-style-position:inside;
+          }
+          ol{
+            padding-left: 15px;
+            margin-left: 5px;
+          }
+          li{
+            line-height: 1.8em;
+          }
+          .jobdetailtitle{
+            padding-left: 20px;
+            margin:20px 0 10px;
+            .strong;
+            color: black;
+            background: url('../../images/aboutus/jobdetailtitle.png') no-repeat left center / 15px auto;
+          }
+        }
+      }
+    }
+  }
+}
+.pageagencyservice{
+  &{
+    text-align: center;
+  }
+  .sectionbox{
+    background: white;
+  }
+  .section1{
+    .blackcolorblock{
+      background: black;
+      border-left: 3px solid @lightblue;
+      height: 10px;
+    }
+  }
 }
 /*******************移动端****************************/
 @media(max-width:600px) {
