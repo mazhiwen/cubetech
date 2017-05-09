@@ -18,7 +18,7 @@ define(function(require,exports,module) {
 
 		$(".footer_box").append('<div><div><div><h3>北京</h3><p class="wechat_phone">电话：+86 10 858 724 39</p><p>地址：朝阳区曙光西里甲5 号院凤凰置地广场A 座写字楼26 层2602 室</p></div><div><h3>纽约</h3><p>电话：+1 （646） 452 7089</p><p>地址：纽约市曼哈顿美国大道1177 号五层10036</p></div></div><div><span>邮件：info@asset3.com(咨询)</span><span>hr@asset3.com(招聘)</span><span>2015资立方@copyright</span><a href="http://www.miit.gov.cn/" class="to_beian">京ICP备15064570号</a><span>客服电话：400 875 9002</span></div></div><div><img src="./images/home/qrcode.jpg"></div>');
 		var showNavFlag=false;
-
+		$(".secondnavservice").append('<a href="agencyservice.html">机构业务</a><a href="familyservice.html">联合家族办公室</a><a href="crossborder.html">跨境展业服务</a>');
 		/*$('body').on('click','.nav_active',function(){
 			if(showNavFlag){
 				$(".nav_box").addClass('color_transparent');
@@ -129,12 +129,21 @@ define(function(require,exports,module) {
 		});
 
 
-		jQuery('.dynamicblock').hover(function(){
+		
+
+/*		jQuery('.dynamicblock').hover(function(){
 			$(this).addClass('dynamicblockhover');
 			
 		},function(){
 			$(this).removeClass('dynamicblockhover');
 			
+		});
+*/
+		$('body').on('mouseenter','.dynamicblock',function(){
+			$(this).addClass('dynamicblockhover');
+		});
+		$('body').on('mouseleave','.dynamicblock',function(){
+			$(this).removeClass('dynamicblockhover');
 		});
 
 	}

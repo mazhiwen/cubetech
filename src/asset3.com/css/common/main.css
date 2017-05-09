@@ -3710,6 +3710,26 @@ p.frontbehindweightv .strong {
   display: block;
   margin-bottom: 10px;
 }
+.circletxt {
+  line-height: normal;
+  background: transparent;
+  border: 3px solid #ddd;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 0 5px;
+  width: 90px;
+  height: 90px;
+}
+.circletxt > span {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.circletxt > span > span {
+  vertical-align: middle;
+  display: table-cell;
+}
 /*分栏统一样式*/
 .sectionbox {
   height: 800px;
@@ -3720,7 +3740,7 @@ p.frontbehindweightv .strong {
   margin-top: 10px;
 }
 .sectionbox p {
-  line-height: 1.7em;
+  line-height: 1em;
   margin: 20px 0;
 }
 .sectionborderwrap {
@@ -4064,7 +4084,6 @@ p.frontbehindweightv .strong {
   height: 100%;
 }
 .dynamicblock .dynamiclayer {
-  transition: all 2s;
   color: white;
   position: absolute;
   width: 100%;
@@ -4080,9 +4099,16 @@ p.frontbehindweightv .strong {
   color: #31bbeb;
   float: right;
 }
+.dynamicblock .dynamiclayer .dynamicsummary {
+  height: 20px;
+  overflow: hidden;
+}
 .dynamicblock.dynamicblockhover .dynamiclayer {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
+}
+.dynamicblock.dynamicblockhover .dynamiclayer .dynamicsummary {
+  height: auto;
 }
 .morearticlebtn {
   display: block;
@@ -4567,16 +4593,94 @@ p.frontbehindweightv .strong {
   color: black;
   background: url('../../images/aboutus/jobdetailtitle.png') no-repeat left center / 15px auto;
 }
+.titletxt {
+  padding: 0 15%;
+  margin: 30px auto;
+  text-align: center;
+}
+.circletxt {
+  width: 130px;
+  height: 130px;
+  border-color: #31bbeb;
+  margin: 40px auto;
+  text-align: center !important;
+}
+.circletxt p {
+  margin: 0;
+}
+.circletxt.circlesolid .mainstrong,
+.circletxt.circlesolidblack .mainstrong {
+  color: white;
+}
+.circlesolid {
+  background: #31bbeb;
+}
+.circlesolidblack {
+  background: black;
+  border-color: black;
+}
+.imgtxtblock {
+  padding: 0 6%;
+  margin: 60px auto;
+  text-align: center;
+}
+.imgtxtblock > div {
+  margin: 0 20px;
+  text-align: left;
+  display: inline-block;
+  width: 200px;
+}
+.servicecontent {
+  background: #f8f8f8;
+}
+.servicecontent .sectionbox {
+  height: auto;
+  background: white;
+  padding: 30px 0;
+  margin-bottom: 10px;
+}
+.servicecontent .scrollheadwrap {
+  color: inherit;
+}
+.servicecontent .scroll_head {
+  height: 400px;
+  color: inherit;
+}
 .pageagencyservice {
   text-align: center;
 }
-.pageagencyservice .sectionbox {
+.pageagencyservice .mainstrong {
+  color: #31bbeb;
+}
+.pageagencyservice .blackcolorblock {
+  background: black;
+  border-left: 5px solid #31bbeb;
+  height: 20px;
+}
+.pageagencyservice .section3 .imgtxtblock > div:nth-child(2) .circletxt {
+  background: black;
+  border-color: black;
+}
+.pagefamilyservice .sectionbox {
+  background: white;
+  height: auto;
+}
+.pagecrossborder .sectionbox {
+  height: auto;
   background: white;
 }
-.pageagencyservice .section1 .blackcolorblock {
-  background: black;
-  border-left: 3px solid #31bbeb;
-  height: 10px;
+.pagecrossborder .section1 .imgtxtblock {
+  text-align: left;
+}
+.pagecrossborder .section1 .circletxt {
+  color: #31bbeb;
+  width: 130px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.pagecrossborder .section1 .circletxt:hover {
+  background: #31bbeb;
+  color: white;
 }
 /*******************移动端****************************/
 @media (max-width: 600px) {

@@ -4031,19 +4031,22 @@ html{
 }
 /*****************圆圈组***************************************/
 .circle_group{
-	text-align: center;
+	&{
+    text-align: center;
+  }
+  &>li{
+    width: 118px;
+    height: 118px;
+    display: inline-block;
+    background: url(../../images/aboutus/sub_2_bac.jpg) no-repeat; 
+    text-align: center;
+    line-height: 118px;
+    margin: 10px 20px;
+      font-size: 1.2rem;
+      box-sizing: border-box;
+  }  
 }
-.circle_group>li{
-	width: 118px;
-	height: 118px;
-	display: inline-block;
-	background: url(../../images/aboutus/sub_2_bac.jpg) no-repeat; 
-	text-align: center;
-	line-height: 118px;
-	margin: 10px 20px;
-    font-size: 1.2rem;
-    box-sizing: border-box;
-}
+
 @media(max-width:600px) {
 	.banner{
  		height: 250px;
@@ -4255,6 +4258,28 @@ p.frontbehindweightv .strong
   display: block;
   margin-bottom: 10px;
 }
+.circletxt{
+  &{
+    line-height: normal;
+    background: transparent;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 0 5px;
+    width: 90px;
+    height: 90px;
+  }
+  &>span{
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  &>span>span{
+    vertical-align: middle;
+        display: table-cell;
+  }  
+}
 /*分栏统一样式*/
 .sectionbox{
   &{
@@ -4269,7 +4294,7 @@ p.frontbehindweightv .strong
     margin-top:10px;
   }
   p{
-    line-height:1.7em;
+    line-height:1em;
     margin:20px 0;
   } 
 }
@@ -4649,7 +4674,7 @@ p.frontbehindweightv .strong
       text-align: left;
     }
     &{
-      transition:all 2s;
+      //transition:all 0.3s;
       color: white;
       position: absolute;
       width: 100%;
@@ -4662,6 +4687,12 @@ p.frontbehindweightv .strong
       color: @lightblue;
       float: right;
     }
+    .dynamicsummary{
+      //width: 100%;
+      height: 20px;
+      overflow: hidden;
+      //text-overflow:ellipsis;
+    }
   }
 }
 .dynamicblock.dynamicblockhover{
@@ -4669,6 +4700,10 @@ p.frontbehindweightv .strong
     &{
       height: 100%;
       background: rgba(0, 0, 0, 0.8);
+    }
+    .dynamicsummary{
+      
+      height: auto;
     }
   }
 }
@@ -4687,6 +4722,7 @@ p.frontbehindweightv .strong
   }
   .section1{
     p{
+
       margin: 10px auto;
     }
     &{
@@ -5284,21 +5320,127 @@ p.frontbehindweightv .strong
     }
   }
 }
+.titletxt{
+  padding: 0 15%;
+  margin: 30px auto;
+  text-align: center;
+}
+.circletxt{
+  &{
+    width: 130px;
+    height: 130px;
+    border-color: @lightblue;
+    margin:40px auto;
+    text-align: center !important;
+  }
+  p{
+    margin: 0;
+  }
+}
+.circletxt.circlesolid,.circletxt.circlesolidblack{
+  .mainstrong{
+    color: white;
+  }
+}
+.circlesolid{
+  &{
+    background: @lightblue;
+  }
+}
+.circlesolidblack{
+  &{
+    background: black;
+    border-color: black;
+  }
+}
+.imgtxtblock{
+  &{
+    padding:0 6%;
+    margin: 60px auto;
+    text-align: center;
+  }
+  &>div{
+    margin: 0 20px;
+    text-align: left;
+    display: inline-block;
+    width: 200px;
+  }
+}
+.servicecontent{
+  &{
+    background: #f8f8f8;
+  }
+  .sectionbox{
+    height: auto;
+    background: white;
+    padding: 30px 0;
+    margin-bottom: 10px;
+  }
+  .scrollheadwrap{
+    color: inherit;
+  }
+  .scroll_head{
+    height: 400px;
+    color: inherit;
+  }  
+}
 .pageagencyservice{
   &{
     text-align: center;
   }
+  .mainstrong{
+    color: @lightblue;
+  }
+  .blackcolorblock{
+    background: black;
+    border-left: 5px solid @lightblue;
+    height: 20px;
+  }
+  .section2{
+  
+  }
+  .section3{
+    .imgtxtblock{
+      &>div:nth-child(2){
+        .circletxt{
+          background: black;
+          border-color: black;
+        }
+      }
+    }
+  }  
+}
+.pagefamilyservice{
   .sectionbox{
+    background: white;
+    height: auto;
+  }
+}
+.pagecrossborder{
+  .sectionbox{
+    height: auto;
     background: white;
   }
   .section1{
-    .blackcolorblock{
-      background: black;
-      border-left: 3px solid @lightblue;
-      height: 10px;
+    .imgtxtblock{
+      text-align: left;
+    }
+    .circletxt{
+      &{
+        color: @lightblue;
+        width: 130px;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+      &:hover{
+        background: @lightblue;
+        color: white;
+      }
     }
   }
 }
+
+
 /*******************移动端****************************/
 @media(max-width:600px) {
 
