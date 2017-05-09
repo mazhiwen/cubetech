@@ -42,20 +42,16 @@ seajs.config({
     base: "./js/lib/",
     alias: {
       //共用 admin 域的文件
-      "commonEdit": "admin/js/modules/commonedit/1.0.0/commonEdit",
       "popUpWindow":'admin/js/lib/popupwindow/1.0.0/popUpWindow.js',
       "jquery": "admin/js/lib/jquery/jquery/3.1.0/jquery-3.1.0.min.js",
-      "getGet": "admin/js/lib/getget/1.0.0/getGet.js",
       "docCookies":"admin/js/lib/doccookies/1.0.0/docCookies.js",
-      "transformTime":'admin/js/lib/transformtime/1.0.0/transformTime.js',
       //私有
       "zepto":"../../../lib/zepto/zepto.js",
       "parseString": "parsestring/1.0.0/parseString.js",
+      "scrollImg":"scrollimg/1.0.0/scrollImg.js",
       "getHtml":'gethtml/1.0.0/getHtml.js',
       "ajaxMy":'ajaxMy/1.0.2/ajaxMy.js',
-      "commonNavigation":'../../../modules/commonnavigation/1.0.0/commonNavigation.js',
       "commonMain":'../../js/modules/commonmain/1.0.0/commonMain.js',
-      "commonCopy":'../../../modules/commoncopy/1.0.0/commonCopy.js',
       "jqueryMobile":"http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js",
       "mustLogin":'../../../modules/mustlogin/1.0.0/mustLogin.js'
     },

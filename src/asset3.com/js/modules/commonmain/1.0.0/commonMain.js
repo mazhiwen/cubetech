@@ -10,6 +10,7 @@ define(function(require,exports,module) {
 		$=Zepto;
 		//require('jqueryMobile');
 		AJAXMY=new(require('ajaxMy'));
+		SCROLLIMG=require('scrollImg');
 		popUpWindow=new(require('popUpWindow'));
 
 
@@ -67,36 +68,7 @@ define(function(require,exports,module) {
 			}	
 		});
 
-		
-
-		//左右滚动图
-		$(".scroll_left").click(function(){
-			$(".scroll_head_oo>div").each(function(key,value){
-				var nowClass=$(this).attr('class');
-				var nowIndex=parseInt(nowClass.substr(8));
-				var nextIndex=null;
-				if(nowIndex==8)
-					nextIndex=1;
-				else
-					nextIndex=++nowIndex;
-				$(this).removeClass(nowClass).addClass('scroll_p'+nextIndex);
-
-			});
-		});
-		$(".scroll_right").click(function(){
-			$(".scroll_head_oo>div").each(function(key,value){
-				var nowClass=$(this).attr('class');
-				//var nowIndex=nowClass[8];
-				var nowIndex=nowClass.substr(8);
-				var nextIndex=null;
-				if(nowIndex==1)
-					nextIndex=8;
-				else
-					nextIndex=--nowIndex;
-				$(this).removeClass(nowClass).addClass('scroll_p'+nextIndex);
-
-			});
-		});
+		//new SCROLLIMG(8);
 
 
 		$(".section5borderbox").on('mouseenter',function(e){
@@ -111,12 +83,16 @@ define(function(require,exports,module) {
 
 		var section3offset=0;
 		$(".section3r").on('click',function(){
-			section3offset-=25;
-			$(".section3ccontent").css("left",section3offset+"%");
+			if(section3offset>(-50)){
+				section3offset-=25;
+				$(".section3ccontent").css("left",section3offset+"%");
+			}
 		});
 		$(".section3l").on('click',function(){
-			section3offset+=25;
-			$(".section3ccontent").css("left",section3offset+"%");
+			if(section3offset<0){
+				section3offset+=25;
+				$(".section3ccontent").css("left",section3offset+"%");
+			}
 		});
 		jQuery('.s3scrollpart').hover(function(){
 			$(this).addClass('secsclbokhoverback');

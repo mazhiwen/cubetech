@@ -62,12 +62,6 @@ h5 {
 h6 {
   font-size: 0.857rem;
 }
-/*
-h4
-{
-	line-height: 30px;font-size: 16px;letter-spacing: 1px;
-
-}*/
 b,
 strong,
 .strong {
@@ -81,15 +75,6 @@ p {
   font-weight: 100;
   color: #646464;
   line-height: 22px;
-}
-.ul_disc {
-  list-style-type: disc;
-}
-.ul_square {
-  list-style-type: square;
-}
-.ul_inside {
-  list-style-position: inside;
 }
 /*BFC*/
 :before,
@@ -3483,45 +3468,48 @@ html {
 .article_box .linked_time {
   text-align: right;
 }
-/*立方服务正文样式*/
-.cubservice_content .describtion {
-  font-size: 1.714rem;
+/*立方服务正文样式
+.cubservice_content .describtion{
+	font-size: 1.714rem;
 }
-.cubservice_content > h2 {
-  margin-top: 0;
-  padding-bottom: 15px;
-  margin-bottom: 9px;
-  background: url('../../images/article_details/main_category_bottom.jpg') no-repeat center bottom / 100% auto;
+.cubservice_content>h2{
+	margin-top: 0;
+	padding-bottom: 15px;
+    margin-bottom: 9px;
+	background: url('../../images/article_details/main_category_bottom.jpg') no-repeat center bottom/100% auto;
 }
-.cubservice_content > h3 > span {
-  display: inline-block;
-  border: 3px solid #eee;
-  padding: 5px 15px;
+.cubservice_content>h3>span{
+	display: inline-block;
+	border: 3px solid #eee;
+	padding: 5px 15px;
 }
-.cubservice_content > h4 {
-  border-left: 5px solid #59c8e4;
-  padding-left: 6px;
+.cubservice_content>h4{
+	border-left: 5px solid rgb(89,200,228);
+	padding-left: 6px;
 }
-.cubservice_content > img {
-  margin: 10px auto;
-  max-width: 700px;
+.cubservice_content>img{
+
+	margin:10px auto;
+    max-width: 700px;
 }
-.cubservice_content > h2,
-.cubservice_content > h3 {
-  color: #59c8e4;
+.cubservice_content>h2,.cubservice_content>h3{
+	color: rgb(89,200,228);
 }
-.cubservice_content > ul {
-  margin: 10px auto;
+.cubservice_content>ul{
+	margin: 10px auto;
 }
-.cubservice_content .max500 {
-  max-width: 500px;
-  margin-top: 10px;
-  margin-bottom: 0;
+.cubservice_content>ul>li{
+	
 }
-.sectionbutton {
-  padding-left: 30px;
-  padding-right: 30px;
+.cubservice_content .max500{
+	max-width: 500px;
+	margin-top: 10px;
+	margin-bottom: 0;
 }
+.sectionbutton{
+	padding-left:30px;	
+	padding-right:30px;
+}*/
 /*****************圆圈组***************************************/
 .circle_group {
   text-align: center;
@@ -3738,6 +3726,8 @@ p.frontbehindweightv .strong {
 }
 .sectionbox .button {
   margin-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .sectionbox p {
   line-height: 1em;
@@ -3979,6 +3969,7 @@ p.frontbehindweightv .strong {
   height: 100%;
   padding: 0 20px;
   position: relative;
+  display: inline-block;
 }
 .sectionscrollblock .s3scrollpart > div {
   position: absolute;
@@ -3991,6 +3982,8 @@ p.frontbehindweightv .strong {
 }
 .sectionscrollblock .s3scrollpart p {
   margin: 0;
+  line-height: 2em;
+  padding: 0 20px;
 }
 .sectionscrollblock .s3scrollpartimg {
   top: 40%;
@@ -4074,7 +4067,6 @@ p.frontbehindweightv .strong {
   display: inline-block;
   width: 48%;
   height: 300px;
-  background: red;
   margin: 15px 1% 0;
   cursor: pointer;
   position: relative;
