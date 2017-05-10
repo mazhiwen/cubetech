@@ -53,6 +53,7 @@ b, strong,.strong {
   font-weight: 700;
 }
 p {
+  line-height: 1.7em;
   margin-bottom: 10px;
 }
 .gray_small{
@@ -4230,16 +4231,21 @@ html{
   background: black no-repeat center center / cover;
 }
 p.frontbehindweight , p.frontbehindweightv{
-  font-size:2.5rem;
+  font-size:2rem;
   font-weight:200;
   color: @lightblue;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
-p.frontbehindweightv .strong  
-{
-  display: block;
-  margin-bottom: 10px;
-}
+p.frontbehindweightv{
+  &{
+    line-height: 1em;
+  }
+  .strong  
+  {
+    display: block;
+    margin-bottom: 10px;
+  }
+} 
 .circletxt{
   &{
     line-height: normal;
@@ -4258,6 +4264,7 @@ p.frontbehindweightv .strong
     height: 100%;
   }
   &>span>span{
+    font-size: 1rem;
     vertical-align: middle;
         display: table-cell;
   }  
@@ -4265,7 +4272,7 @@ p.frontbehindweightv .strong
 /*分栏统一样式*/
 .sectionbox{
   &{
-    height: 800px;
+    height: 700px;
     background: black no-repeat center center / cover;
     
     font-weight: 200;
@@ -4278,8 +4285,8 @@ p.frontbehindweightv .strong
     padding-right: 30px;
   }
   p{
-    line-height:1em;
-    margin:20px 0;
+
+    //margin:20px 0;
   } 
 }
 .sectionborderwrap{
@@ -4438,7 +4445,9 @@ p.frontbehindweightv .strong
     
   }
   .scroll_head_oo *{
-    transition:all 2s;
+    transition-property: all ;
+    transition-duration:2s;
+    //transition:all 2s;
   }
   div.scroll_p2{
     left: 35%;
@@ -4447,7 +4456,7 @@ p.frontbehindweightv .strong
   }
   div.scroll_p2>img{
     margin-top: 0px !important;
-    width: 200px !important;
+    width: 150px !important;
   }
   div.scroll_p2>p{
     font-size: 1rem !important;
@@ -4697,6 +4706,10 @@ p.frontbehindweightv .strong
   display: block;
   margin:20px auto;
 }
+.aboveblockicon{
+  width: 60px;
+  margin-bottom: 10px;
+}
 /*pagehome*/
 .pagehome{
 	.bannerbox{
@@ -4708,7 +4721,7 @@ p.frontbehindweightv .strong
   }
   .section1{
     p{
-
+      line-height:1em;
       margin: 10px auto;
     }
     &{
@@ -4761,7 +4774,7 @@ p.frontbehindweightv .strong
         
       }
       &>p:nth-child(1){
-        margin-bottom: 50px;  
+        //margin-bottom: 50px;  
       }
     }
     .button{
@@ -4788,7 +4801,7 @@ p.frontbehindweightv .strong
       background-image: url('../../images/home/section6.jpg');
     }
     .displayflex{
-      height: 600px;
+      height: 500px;
     }
     .strong{
       display: block;
@@ -4797,6 +4810,10 @@ p.frontbehindweightv .strong
 }
 /*pageservice*/
 .pageservice{
+  .sectionbutton{
+    background: rgb(220, 220, 220);
+    color: rgb(125, 125, 125);
+  }
   .section1{
     &{
       background: white;
@@ -4835,6 +4852,9 @@ p.frontbehindweightv .strong
       img{
         width: 100%;
       }
+    }
+    .frontbehindweightv{
+      color: rgb(207, 169, 130);
     }  
   }
   .rotatecircledot{
@@ -4936,8 +4956,13 @@ p.frontbehindweightv .strong
 }
 .pagepartner{
   .scrollheadwrap{
-    background: white;
-    color: black;
+    &{
+      background: white;
+      color: black;
+    }
+    .scroll_p5{
+      left: -35%;
+    }
   }
   .section2{
     &{
@@ -4957,9 +4982,10 @@ p.frontbehindweightv .strong
         margin: 5px 10px;
         display: inline-block;
         position: relative;
+        height: 40px;
       }
       span:hover::before{
-        content: " ";
+        content: "";
         position:absolute;
         width: 100%;
         height: 100%;
@@ -4967,6 +4993,7 @@ p.frontbehindweightv .strong
       }
       img{
         width: 120px;
+        height: 100%;
       }
     }
   }
@@ -5063,7 +5090,7 @@ p.frontbehindweightv .strong
             height: 100px;
             background: @section2ccirclegray;
             position: relative;
-            margin-bottom: 40px;
+            margin: 0 auto 40px;
           }
           p{
             line-height: 100px;
@@ -5315,7 +5342,7 @@ p.frontbehindweightv .strong
   &{
     width: 130px;
     height: 130px;
-    border-color: @lightblue;
+    border-color:rgba(36,186,237,0.2);
     margin:40px auto;
     text-align: center !important;
   }
@@ -5350,6 +5377,7 @@ p.frontbehindweightv .strong
     text-align: left;
     display: inline-block;
     width: 200px;
+    vertical-align: top;
   }
 }
 .servicecontent{
@@ -5409,13 +5437,19 @@ p.frontbehindweightv .strong
   }
   .section1{
     .imgtxtblock{
-      text-align: left;
+      &{
+        text-align: left;
+      }
+      &>div:last-child{
+        color: rgba(0,0,0,0.2);
+        border-color: rgba(0,0,0,0.2);
+      }
     }
     .circletxt{
       &{
         color: @lightblue;
         width: 130px;
-        margin-top: 50px;
+        margin: 20px;
         cursor: pointer;
       }
       &:hover{

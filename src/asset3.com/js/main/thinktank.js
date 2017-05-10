@@ -15,7 +15,7 @@ define(function(require) {
 		});
 		$(".maincontentwrap").append(articleHtml);
 	});
-
+	
 
 
 

@@ -68,6 +68,7 @@ strong,
   font-weight: 700;
 }
 p {
+  line-height: 1.7em;
   margin-bottom: 10px;
 }
 .gray_small {
@@ -3689,10 +3690,13 @@ html {
 }
 p.frontbehindweight,
 p.frontbehindweightv {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
   color: #31bbeb;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+p.frontbehindweightv {
+  line-height: 1em;
 }
 p.frontbehindweightv .strong {
   display: block;
@@ -3715,12 +3719,13 @@ p.frontbehindweightv .strong {
   height: 100%;
 }
 .circletxt > span > span {
+  font-size: 1rem;
   vertical-align: middle;
   display: table-cell;
 }
 /*分栏统一样式*/
 .sectionbox {
-  height: 800px;
+  height: 700px;
   background: black no-repeat center center / cover;
   font-weight: 200;
 }
@@ -3728,10 +3733,6 @@ p.frontbehindweightv .strong {
   margin-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
-}
-.sectionbox p {
-  line-height: 1em;
-  margin: 20px 0;
 }
 .sectionborderwrap {
   background: #1a416a;
@@ -3872,7 +3873,8 @@ p.frontbehindweightv .strong {
   padding: 30px 70px;
 }
 .scrollheadwrap .scroll_head_oo * {
-  transition: all 2s;
+  transition-property: all ;
+  transition-duration: 2s;
 }
 .scrollheadwrap div.scroll_p2 {
   left: 35%;
@@ -3881,7 +3883,7 @@ p.frontbehindweightv .strong {
 }
 .scrollheadwrap div.scroll_p2 > img {
   margin-top: 0px !important;
-  width: 200px !important;
+  width: 150px !important;
 }
 .scrollheadwrap div.scroll_p2 > p {
   font-size: 1rem !important;
@@ -4106,6 +4108,10 @@ p.frontbehindweightv .strong {
   display: block;
   margin: 20px auto;
 }
+.aboveblockicon {
+  width: 60px;
+  margin-bottom: 10px;
+}
 /*pagehome*/
 .pagehome .bannerbox {
   background-image: url('../../images/home/banner_1.jpg');
@@ -4119,6 +4125,7 @@ p.frontbehindweightv .strong {
   background-image: url('../../images/home/section1.jpg');
 }
 .pagehome .section1 p {
+  line-height: 1em;
   margin: 10px auto;
 }
 .pagehome .section1 > div > p:nth-child(1) {
@@ -4152,9 +4159,6 @@ p.frontbehindweightv .strong {
 .pagehome .section2 > div:nth-child(2) > div {
   width: 25%;
 }
-.pagehome .section2 > div:nth-child(1) > div > p:nth-child(1) {
-  margin-bottom: 50px;
-}
 .pagehome .section2 .button {
   margin-top: 20px;
 }
@@ -4172,12 +4176,16 @@ p.frontbehindweightv .strong {
   background-image: url('../../images/home/section6.jpg');
 }
 .pagehome .section6 .displayflex {
-  height: 600px;
+  height: 500px;
 }
 .pagehome .section6 .strong {
   display: block;
 }
 /*pageservice*/
+.pageservice .sectionbutton {
+  background: #dcdcdc;
+  color: #7d7d7d;
+}
 .pageservice .section1 {
   background: white;
 }
@@ -4207,6 +4215,9 @@ p.frontbehindweightv .strong {
 }
 .pageservice .section2 > div:nth-child(2) img {
   width: 100%;
+}
+.pageservice .section2 .frontbehindweightv {
+  color: #cfa982;
 }
 .pageservice .rotatecircledot .rotatecircledotanimate {
   animation: rotatecircledotkeyframe 2s linear infinite;
@@ -4298,6 +4309,9 @@ p.frontbehindweightv .strong {
   background: white;
   color: black;
 }
+.pagepartner .scrollheadwrap .scroll_p5 {
+  left: -35%;
+}
 .pagepartner .section2 {
   background: #1a416a;
   color: white;
@@ -4314,9 +4328,10 @@ p.frontbehindweightv .strong {
   margin: 5px 10px;
   display: inline-block;
   position: relative;
+  height: 40px;
 }
 .pagepartner .section2 .section2imggroup span:hover::before {
-  content: " ";
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4324,6 +4339,7 @@ p.frontbehindweightv .strong {
 }
 .pagepartner .section2 .section2imggroup img {
   width: 120px;
+  height: 100%;
 }
 .pagepartner .sectionscrollblock .section3c {
   background: url('../../images/partner/mediareport.jpg') center center / 100% 100%;
@@ -4396,7 +4412,7 @@ p.frontbehindweightv .strong {
   height: 100px;
   background: #7d7d7d;
   position: relative;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 .pageaboutus .aboutcubetech .section2 .section2c .section2ccircle p {
   line-height: 100px;
@@ -4593,7 +4609,7 @@ p.frontbehindweightv .strong {
 .circletxt {
   width: 130px;
   height: 130px;
-  border-color: #31bbeb;
+  border-color: rgba(36, 186, 237, 0.2);
   margin: 40px auto;
   text-align: center !important;
 }
@@ -4621,6 +4637,7 @@ p.frontbehindweightv .strong {
   text-align: left;
   display: inline-block;
   width: 200px;
+  vertical-align: top;
 }
 .servicecontent {
   background: #f8f8f8;
@@ -4664,10 +4681,14 @@ p.frontbehindweightv .strong {
 .pagecrossborder .section1 .imgtxtblock {
   text-align: left;
 }
+.pagecrossborder .section1 .imgtxtblock > div:last-child {
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
 .pagecrossborder .section1 .circletxt {
   color: #31bbeb;
   width: 130px;
-  margin-top: 50px;
+  margin: 20px;
   cursor: pointer;
 }
 .pagecrossborder .section1 .circletxt:hover {
